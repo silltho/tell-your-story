@@ -17,3 +17,15 @@
 * Thomas Siller
 
 # Setup
+
+**Server starten**
+
+´´´npm start´´´ 
+
+(Server läuft auf Port 3333)
+
+**Smartphone Testen**
+* Laptop und Handy müssen sich im selben WLAN befinden.
+* Server am Laptop starten.
+* Am Handy \<laptop-ip\>:3333 mit dem Browser öffnen.
+* Unter Option "Am Startbildschirm platzieren" auswählen.
