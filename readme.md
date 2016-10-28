@@ -20,9 +20,7 @@
 
 **Server starten**
 
-```npm start```
-
-(Server läuft auf Port 3333)
+```npm start``` (läuft auf Port 3333)
 
 **Smartphone Testen**
 * Laptop und Handy müssen sich im selben WLAN befinden.
