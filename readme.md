@@ -16,11 +16,15 @@
 * Thomas Siller
 
 # Setup
-### Server starten:
+### 1. Dependencies installieren:
+```npm install```
+
+
+### 2. Server starten:
 ```npm start``` (läuft auf Port 3333)
 
-### Smartphone Testen
+### 3. Smartphone konfigurieren
 * Server und Handy müssen sich im selben WLAN befinden
 * Server starten
-* Am Handy **"server-ip":3333** mit dem Browser öffnen
+* Am Handy **"server-ip":3333** im Browser öffnen
 * Unter Option **"Am Startbildschirm platzieren"** auswählen
