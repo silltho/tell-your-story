@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run scss && node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --output-style expanded -o css scss/tell-your-story.scss"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,9 @@
     "localStorage": "^1.0.3",
     "ratchet-npm": "^2.0.4",
     "serve-static": "^1.11.1"
+  },
+  "devDependencies": {
+    "node-sass": "^3.10.1",
+    "node-sass-middleware": "^0.9.8"
   }
 }
