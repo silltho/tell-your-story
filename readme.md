@@ -28,3 +28,10 @@
 * Server starten
 * Am Handy **"server-ip":3333** im Browser öffnen
 * Unter Option **"Am Startbildschirm platzieren"** auswählen
+ 
+# NPM Skripts
+**Server starten:** ```npm start``` Compiliert Sass Dateien und startet den Server.
+
+**Sass compiling:** ```npm run scss``` Compiliert Sass Dateien
+
+**Testen:** todo
