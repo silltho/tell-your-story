@@ -1,5 +1,51 @@
 @import "variables.scss";
 
+#addBtn {
+  color: $highlight-color;
+  background-color: $primary-color;
+  border: solid 1px $highlight-color;
+  border-radius: 100%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  transform: scale(1.5, 1.5);
+
+
+}
+
 .bar-nav > .title {
-  background-color: $basic-color;
+  background-color: $primary-color;
+  color: $highlight-color;
+}
+
+.media-body {
+  color: $highlight-color;
+}
+
+.media-body > p {
+  color: $primary-color;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+}
+
+.media-body > p:after {
+  content: '...';
+}
+
+.table-view-cell > .icon {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  transform: scale(0.8, 0.8);
+  padding-top: 2px;
+  padding-left: 1px;
+  padding-right: 1px;
+  padding-bottom: 1px;
+}
+
+.danger {
+  color: $danger-color;
+  background-color: $danger-background-color;
+  border: solid 1px $danger-color;
 }
