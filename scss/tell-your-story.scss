@@ -6,11 +6,10 @@
   border: solid 1px $highlight-color;
   border-radius: 100%;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  transform: scale(1.5, 1.5);
-
-
+  bottom: 30px;
+  right: 30px;
+  transform: scale(1.8, 1.8);
+  opacity: 0.8;
 }
 
 .bar-nav > .title {
@@ -23,10 +22,14 @@
 }
 
 .media-body > p {
-  color: $primary-color;
+  color:$primary-color;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space:nowrap;
+}
+
+.media-body small {
+  color: $ratchet-color;
 }
 
 .media-body > p:after {
