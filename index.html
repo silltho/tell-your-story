@@ -13,17 +13,51 @@
 		<!-- Include the compiled Ratchet CSS -->
 		<link href="./node_modules/ratchet-npm/dist/css/ratchet.css" rel="stylesheet">
 
-		<!-- Include the compiled Ratchet JS -->
-		<script src="./node_modules/ratchet-npm/dist/js/ratchet.js"></script>
+		<!-- include JQuery-->
+		<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 
+		<!-- Include the compiled Ratchet JS -->
+		<!--<script src="./node_modules/ratchet-npm/dist/js/ratchet.js"></script>-->
+		<script src="./js/ratchet.js"></script>
+
+		<script type="application/javascript">
+			function toggleModal() {
+				/*var modalSelector = '#addEventModal';
+				if($(modalSelector).hasClass('active')) $(modalSelector).removeClass('active');
+				else $('#addEventModal').addClass('active');*/
+			}
+			/*function closeModal() {
+				$('#addEventModal').removeClass('active');
+			}
+
+			function openModal() {
+				$('#addEventModal').addClass('active');
+			}*/
+		</script>
+
+		<!--TelYourStory-->
 		<link href="/css/tell-your-story.css" rel="stylesheet">
 
 	</head>
 	<body>
 		<!-- Make sure all your bars are the first things in your <body> -->
 		<header class="bar bar-nav">
-		  <h1 class="title">TellYourStory</h1>
+			<img id="logo" class="media-object pull-left" src="./img/tellyourstory-logokreis.png"/>
+			<a class="icon icon-plus pull-right" href="#addEventModal"></a>
+		  	<h1 class="title">TellYourStory</h1>
 		</header>
+
+		<!--Add-Event-Modal-->
+		<div id="addEventModal" class="modal">
+			<header class="bar bar-nav">
+				<a class="icon icon-close pull-right" href="/"></a>
+				<h1 class="title">Neues Erlebnis starten</h1>
+			</header>
+
+			<div class="content">
+				<p class="content-padded">The contents of my modal go here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+			</div>
+		</div>
 
 		<!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
 		<div class="content">
@@ -119,10 +153,10 @@
 					</a>
 				</li>
 			</ul>
-			<a id="addBtn" href=""><span class="icon icon-btn icon-plus"></span></a>
+			<!--<a id="addBtn" href=""><span class="icon icon-btn icon-plus"></span></a>-->
 		</div>
 
-		<!-- add fingerblast for desktop users -->
+		<!--add fingerblast for desktop users-->
 		<script src="./node_modules/ratchet-npm/docs/assets/js/fingerblast.js"></script>
 		<script>
 			var fingerBlast = new FingerBlast('a');
