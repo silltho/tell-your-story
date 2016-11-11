@@ -20,9 +20,9 @@
 		<!--<script src="./node_modules/ratchet-npm/dist/js/ratchet.js"></script>-->
 		<script src="./js/ratchet.js"></script>
 
-		<script type="application/javascript">
+		<!--<script type="application/javascript">
 			function toggleModal() {
-				/*var modalSelector = '#addEventModal';
+				var modalSelector = '#addEventModal';
 				if($(modalSelector).hasClass('active')) $(modalSelector).removeClass('active');
 				else $('#addEventModal').addClass('active');*/
 			}
@@ -32,8 +32,8 @@
 
 			function openModal() {
 				$('#addEventModal').addClass('active');
-			}*/
-		</script>
+			}
+		</script>-->
 
 		<!--TelYourStory-->
 		<link href="/css/tell-your-story.css" rel="stylesheet">
@@ -159,7 +159,16 @@
 		<!--add fingerblast for desktop users-->
 		<script src="./node_modules/ratchet-npm/docs/assets/js/fingerblast.js"></script>
 		<script>
-			var fingerBlast = new FingerBlast('a');
+			var fingerBlast;
+			function activateDesktopSupport (e) {
+					fingerBlast = new FingerBlast('a');
+					//e.preventDefault();
+			}
+
+			window.addEventListener('push', activateDesktopSupport);
+			window.addEventListener('load', activateDesktopSupport);
+			/*window.addEventListener('click', activateDesktopSupport);
+			window.addEventListener('popstate', activateDesktopSupport)*/
 		</script>
 	</body>
 </html>
