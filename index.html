@@ -17,8 +17,8 @@
 		<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 
 		<!-- Include the compiled Ratchet JS -->
-		<!--<script src="./node_modules/ratchet-npm/dist/js/ratchet.js"></script>-->
-		<script src="./js/ratchet.js"></script>
+		<script src="./node_modules/ratchet-npm/dist/js/ratchet.js"></script>
+		<!--<script src="./js/ratchet.js"></script>   Desktop Support
 
 		<!--<script type="application/javascript">
 			function toggleModal() {
@@ -54,13 +54,15 @@
 				<h1 class="title">Neues Erlebnis starten</h1>
 			</header>
 
-			<div class="content">
+			<div class="content content-padded">
 				<form>
 					<input type="text" placeholder="Name">
-					<input type="text" placeholder="Von">
-					<input type="text" placeholder="Bis">
+					<div class="form-row">
+						<input type="text" placeholder="Von">
+						<input type="text" placeholder="Bis">
+					</div>
 					<textarea rows="5" placeholder="Beschreibung"></textarea>
-					<button class="btn btn-positive btn-block">speichern</button>
+					<a class="btn btn-positive btn-block" href="event.html">speichern</a>
 				</form>
 			</div>
 		</div>
