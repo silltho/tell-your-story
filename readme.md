@@ -34,4 +34,6 @@
 
 **Sass compiling:** ```npm run scss``` Compiliert Sass Dateien
 
+**Development:** ```npm run dev``` Überwacht scss files und compiled ggf neu
+
 **Testen:** todo

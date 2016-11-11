@@ -55,7 +55,13 @@
 			</header>
 
 			<div class="content">
-				<p class="content-padded">The contents of my modal go here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+				<form>
+					<input type="text" placeholder="Name">
+					<input type="text" placeholder="Von">
+					<input type="text" placeholder="Bis">
+					<textarea rows="5" placeholder="Beschreibung"></textarea>
+					<button class="btn btn-positive btn-block">speichern</button>
+				</form>
 			</div>
 		</div>
 
@@ -167,8 +173,10 @@
 
 			window.addEventListener('push', activateDesktopSupport);
 			window.addEventListener('load', activateDesktopSupport);
-			/*window.addEventListener('click', activateDesktopSupport);
-			window.addEventListener('popstate', activateDesktopSupport)*/
+			window.addEventListener('popstate', activateDesktopSupport);
+			/*
+			window.addEventListener('click', activateDesktopSupport);
+			*/
 		</script>
 	</body>
 </html>

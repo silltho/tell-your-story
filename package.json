@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run scss && node index.js",
-    "start-dev": "concurrently --kill-others \"npm run scss -- -w\" \"node index.js\"",
+    "dev": "concurrently --kill-others \"npm run scss -- -w\" \"node index.js\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "node-sass --output-style expanded -o css scss/tell-your-story.scss"
   },
