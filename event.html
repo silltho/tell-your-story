@@ -17,8 +17,9 @@
         <li class="table-view-cell media">
             <div class="media-body">
                 <h4> Erlebnisbeschreibung </h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                <div id="event-description"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore. Lorem ipsum dolor sit amet.</p>
+                </div>
                 <p>
                     <small>10.11.2016 - 10.11.2016</small>
                 </p>
@@ -52,4 +53,14 @@
 <script src="./node_modules/ratchet-npm/docs/assets/js/fingerblast.js"></script>
 <script>
     var fingerBlast = new FingerBlast('a');
+
+    //Erlebnisbeschreibung in der Wortanzahl begrenzen
+    function charLimit()
+    {
+        let description = document.getElementById("event-description").innerHTML;
+        if(strlen(description) >= 20)
+        {
+            description.innerHTML = description.substr(0, 20) + "...";
+        }
+    }
 </script>
