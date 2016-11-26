@@ -99,5 +99,20 @@ addBtn {
 
 //Image width in events
 .img-list {
-  width: 135px;
+  width: 160px;
+}
+//whole image list in events
+.img-list-right {
+  padding-right: 15px;
+}
+
+.icon-img {
+  width: 80px;
+}
+
+.event-date {
+  text-align: center;
+  h4{
+    margin-bottom: 0;
+  }
 }
