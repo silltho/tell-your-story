@@ -36,4 +36,4 @@
 
 **Development:** ```npm run dev``` Überwacht scss files und compiled ggf neu
 
-**Testen:** todo
+**Testen:** ```npm test```
