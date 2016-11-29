@@ -1,10 +1,126 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<header class="bar bar-nav">
+    <a class="icon icon-left-nav pull-left" href="event.html"></a>
+    <h1 class="title">ErzählerView</h1>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 
-</body>
-</html>
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="./node_modules/ratchet-npm/dist/css/ratchet.css" rel="stylesheet">
+
+    <!-- include JQuery-->
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+    <!-- Include the compiled Ratchet JS -->
+    <!--<script src="./node_modules/ratchet-npm/dist/js/ratchet.js"></script>-->
+    <!---Desktop Support-->
+    <script src="./dist/js/ratchet.js"></script>   <!---Desktop Support-->
+
+    <!--<script type="application/javascript">
+        function toggleModal() {
+            var modalSelector = '#addEventModal';
+            if($(modalSelector).hasClass('active')) $(modalSelector).removeClass('active');
+            else $('#addEventModal').addClass('active');*/
+        }
+        /*function closeModal() {
+            $('#addEventModal').removeClass('active');
+        }
+
+        function openModal() {
+            $('#addEventModal').addClass('active');
+        }
+    </script>-->
+
+    <!--TelYourStory-->
+    <link href="/dist/css/tell-your-story.css" rel="stylesheet">
+</header>
+<div class="content">
+
+    <div class="slider" id="mySlider">
+        <div class="slide-group">
+            <div class="slide">
+                <img class="slide-image" src="dist/img/test-img/test.jpg">
+
+                <div class="asset-description">
+                    <div class="specific-description">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <img class="slide-image" src="https://s-media-cache-ak0.pinimg.com/236x/01/5a/65/015a65fc6aa5a9ea49b65ba80ab01c46.jpg">
+                <div class="asset-description">
+                    <div class="specific-description">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <img class="slide-image" src="dist/img/test-img/test.jpg">
+                <div class="asset-description">
+                    <div class="specific-description">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <!--<ul class="table-view">
+        <li class="table-view-cell media">
+            <div class="media-body">
+                <h4> Erlebnisbeschreibung </h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore. Lorem ipsum dolor sit amet.</p>
+                <p>
+                    <small>10.11.2016 - 10.11.2016</small>
+                </p>
+            </div>
+        </li>
+        <li class="table-view-cell media">
+            <img class="media-object img-list" src="dist/img/test-img/test.jpg">
+            <img class="media-object img-list" src="dist/img/test-img/test.jpg">
+            <img class="media-object img-list" src="dist/img/test-img/test.jpg">
+            <img class="media-object img-list" src="dist/img/test-img/test.jpg">
+            <img class="media-object img-list" src="dist/img/test-img/test.jpg">
+            <img class="media-object img-list" src="dist/img/test-img/test.jpg">
+        </li>
+    </ul>-->
+
+
+    <!-- <div id="action-popover" class="modal">
+         <header class="bar bar-nav">
+             <a class="icon icon-close pull-right" href="event.html"></a>
+             <h1 class="title">Medien hochladen</h1>
+         </header>
+     </div>
+     <footer class="bar bar-standard bar-footer">
+         <a class="icon icon-plus pull-right" href="#action-popover"></a>
+     </footer>-->
+
+
+</div>
+
+<!-- add fingerblast for desktop users -->
+<script src="./node_modules/ratchet-npm/docs/assets/js/fingerblast.js"></script>
+<script>
+    var fingerBlast = new FingerBlast('a');
+</script>

@@ -101,3 +101,61 @@ addBtn {
 .img-list {
   width: 135px;
 }
+
+//----------------------------------------------------------------------
+
+// ErzählerView
+
+
+// Outer wrapper for slider
+.slider {
+  //overflow: hidden;
+  //background-color: #000;
+  overflow-y: hidden;
+
+  background-color: $basic-color;
+  width: 100%;
+
+  // Inner wrapper for slider (width of all slides together)
+  .slide-group {
+    position: static;
+    //font-size: 0; // Remove spaces from inline-block children
+    //white-space: nowrap;
+    //@include transition(all 0s linear);
+
+    // Individual slide
+    .slide {
+
+      //display: inline-block;
+      //width: 100%;
+      height: auto;
+      //font-size: 14px;
+      //vertical-align: top; // Ensure that li always aligns to top
+      .slide-image{
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        height: 80%;
+        //height: auto;
+      }
+
+      .asset-description
+      {
+        background: rgba(0,0,0,0.8);
+        color: white;
+        text-align: center;
+        .specific-description
+        {
+          white-space: normal;
+          width: 100%;
+          overflow-y: auto;
+          height: 26%;
+
+        }
+      }
+
+    }
+  }
+}
+
+//----------------------------------------------------------------------
