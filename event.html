@@ -1,3 +1,28 @@
+<head>
+    <meta charset="utf-8">
+    <title>TellYourStory</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="./node_modules/ratchet-npm/dist/css/ratchet.css" rel="stylesheet">
+
+    <!-- include JQuery-->
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+    <!-- Include the compiled Ratchet JS -->
+    <!--<script src="./node_modules/ratchet-npm/dist/js/ratchet.js"></script>-->
+    <!---Desktop Support-->
+    <script src="./dist/js/ratchet.js"></script>   <!---Desktop Support-->
+    <link href="/dist/css/tell-your-story.css" rel="stylesheet">
+
+</head>
+
 <header class="bar bar-nav">
     <a class="icon icon-left-nav pull-left" href="index.html"></a>
     <a class="icon icon-more-vertical pull-right" href="#myPopover"></a>
@@ -18,43 +43,57 @@
             <h4>10.11.2016 - 10.11.2016</h4>
         </li>
         <li class="table-view-cell media img-list-right">
-            <img class="media-object img-list" src="dist/img/test-img/test.jpg">
-            <img class="media-object img-list" src="dist/img/test-img/test.jpg">
-            <img class="media-object img-list" src="dist/img/test-img/test.jpg">
-            <img class="media-object img-list" src="dist/img/test-img/test.jpg">
-            <img class="media-object img-list" src="dist/img/test-img/test.jpg">
-            <img class="media-object img-list" src="dist/img/test-img/test.jpg">
-            <img class="media-object img-list" src="dist/img/test-img/test.jpg">
-            <img class="media-object img-list" src="dist/img/test-img/test.jpg">
-            <img class="media-object img-list" src="dist/img/test-img/test.jpg">
-            <img class="media-object img-list" src="dist/img/test-img/test.jpg">
-            <img class="media-object img-list" src="dist/img/test-img/test.jpg">
-            <img class="media-object img-list" src="dist/img/test-img/test.jpg">
-            <img class="media-object img-list" src="dist/img/test-img/test.jpg">
-            <img class="media-object img-list" src="dist/img/test-img/test.jpg">
-            <img class="media-object img-list" src="dist/img/test-img/test.jpg">
-            <img class="media-object img-list" src="dist/img/test-img/test.jpg">
+            <img class="media-object event-images" src="dist/img/test-img/test.jpg">
+            <img class="media-object event-images" src="dist/img/test-img/test.jpg">
+            <img class="media-object event-images" src="dist/img/test-img/test.jpg">
+            <img class="media-object event-images" src="dist/img/test-img/test.jpg">
+            <img class="media-object event-images" src="dist/img/test-img/test.jpg">
+            <img class="media-object event-images" src="dist/img/test-img/test.jpg">
+            <img class="media-object event-images" src="dist/img/test-img/test.jpg">
+            <img class="media-object event-images" src="dist/img/test-img/test.jpg">
+            <img class="media-object event-images" src="dist/img/test-img/test.jpg">
+            <img class="media-object event-images" src="dist/img/test-img/test.jpg">
+            <img class="media-object event-images" src="dist/img/test-img/test.jpg">
+            <img class="media-object event-images" src="dist/img/test-img/test.jpg">
+            <img class="media-object event-images" src="dist/img/test-img/test.jpg">
+            <img class="media-object event-images" src="dist/img/test-img/test.jpg">
+            <img class="media-object event-images" src="dist/img/test-img/test.jpg">
+            <img class="media-object event-images" src="dist/img/test-img/test.jpg">
         </li>
     </ul>
 
-
-    <div id="action-popover" class="modal">
-        <header class="bar bar-nav">
-            <a class="icon icon-close pull-right" href="event.html"></a>
-            <h1 class="title">Medien hochladen</h1>
-        </header>
-        <div class="content content-padded">
-            <img src="dist/img/icons/camera.png" alt="camera-icon" class="icon-img">
-            <img src="dist/img/icons/video.png" alt="video-icon" class="icon-img">
-            <img src="dist/img/icons/note.png" alt="note-icon" class="icon-img">
-            <img src="dist/img/icons/img.png" alt="image-icon" class="icon-img">
+    <!--
+        <div id="action-popover" class="modal">
+            <header class="bar bar-nav">
+                <a class="icon icon-close pull-right" href="event.html"></a>
+                <h1 class="title">Medien hochladen</h1>
+            </header>
+            <div class="content content-padded">
+                <img src="dist/img/icons/camera.png" alt="camera-icon" class="icon-img">
+                <img src="dist/img/icons/video.png" alt="video-icon" class="icon-img">
+                <img src="dist/img/icons/note.png" alt="note-icon" class="icon-img">
+                <img src="dist/img/icons/img.png" alt="image-icon" class="icon-img">
+            </div>
         </div>
-    </div>
-    <footer class="bar bar-standard bar-footer">
-        <a class="icon icon-plus pull-right" href="#action-popover"></a>
+        -->
+    <footer class="bar bar-tab">
+        <a class="tab-item active" href="#">
+            <span class="icon icon-file-text"></span>
+            <!--<span class="tab-label">Home</span>-->
+        </a>
+        <a class="tab-item" href="#">
+            <span class="icon icon-file-picture"></span>
+           <!-- <span class="tab-label">Profile</span>-->
+        </a>
+        <a class="tab-item" href="#">
+            <span class="icon icon-camera"></span>
+            <!--<span class="tab-label">Favorites</span>-->
+        </a>
+        <a class="tab-item" href="#">
+            <span class="icon icon-film"></span>
+           <!-- <span class="tab-label">Search</span>-->
+        </a>
     </footer>
-
-
 </div>
 
 <!-- add fingerblast for desktop users -->
