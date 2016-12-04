@@ -87,6 +87,7 @@
         $(document).ready(function () {
             $('.show').hide()
             $('.open').bind('click touchstart', function () {
+                $(".open").toggleClass("icon-down icon-up");
                 $('.show').fadeToggle()
             });
         });
