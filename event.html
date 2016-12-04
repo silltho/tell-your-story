@@ -20,10 +20,10 @@
     <!---Desktop Support-->
     <script src="./dist/js/ratchet.js"></script>   <!---Desktop Support-->
     <link href="/dist/css/tell-your-story.css" rel="stylesheet">
+    <script href="/dist/js/event.js"></script>
 
     <!-- Material Design Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 
@@ -45,6 +45,12 @@
     <ul class="table-view">
         <li class="table-view-cell media event-date">
             <h4>10.11.2016 - 10.11.2016</h4>
+        </li>
+
+        <li class="table-view-cell media event-description">
+            <span class="icon icon-down open"></span>
+            <h5>Beschreibung</h5>
+            <p><span class="show">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</span></p>
         </li>
         <li class="table-view-cell media img-list-right">
             <img class="media-object event-images" src="dist/img/test-img/test.jpg">
@@ -91,6 +97,15 @@
             <i class="material-icons">add_a_photo</i>
         </a>
     </nav>
+
+    <script class="js-custom">
+        $(document).ready(function () {
+            $('.show').hide()
+            $('.open').bind('click touchstart', function () {
+                $('.show').fadeToggle()
+            });
+        });
+    </script>
 </div>
 
 <!-- add fingerblast for desktop users -->
