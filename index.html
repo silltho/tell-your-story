@@ -184,13 +184,12 @@
 			*/
 
 
-
-            var checkPage = function(){
-				//Only run if test123 exists on page
-                if(document.getElementByClassName('open')) {
-                }
-            };
-            window.addEventListener('push', checkPage);
+			window.addEventListener('push', function(){
+				var scriptsList = document.querySelectorAll('script.js-custom');
+				for(var i = 0; i < scriptsList.length; ++i) {
+					eval(scriptsList[i].innerHTML);
+				}
+			});
 		</script>
 	</body>
 </html>
