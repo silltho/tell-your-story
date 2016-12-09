@@ -190,13 +190,18 @@ addBtn {
 }
 
 //----------------------------------------------------------------------
-  //width: 160px;
-//}
+
+//Event
+
+
 //whole image list in events
 .img-list-right {
   padding-right: 15px;
 }
 
+.event-images{
+  width: 160px;
+}
 .icon-img {
   width: 80px;
 }
@@ -207,3 +212,12 @@ addBtn {
     margin-bottom: 0;
   }
 }
+
+.event-description{
+  h5{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
