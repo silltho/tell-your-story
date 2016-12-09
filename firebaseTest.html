@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FirebaseTest</title>
+</head>
+<body>
+
+    <div id="input">
+        <input type="file" id="file">
+        <button id="submitButton" onclick="submitFunc(event)">Submit</button>
+    </div>
+
+    <div id="output">
+        <button id="showButton" onclick="showFunc()">ShowPic</button>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBhMuIF7RjN2aYePvTtj8CWOC2JrZSfDFM",
+            authDomain: "mmp2-c6757.firebaseapp.com",
+            databaseURL: "https://mmp2-c6757.firebaseio.com",
+            storageBucket: "mmp2-c6757.appspot.com",
+            messagingSenderId: "1060144890044"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+<script src="dist/js/indexJS.js"></script>
+</body>
+</html>
