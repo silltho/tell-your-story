@@ -67,14 +67,14 @@
 						<input type="text" name="bis" placeholder="Bis" id="event-to">
 					</div>
 					<textarea rows="5" name="beschreibung" placeholder="Beschreibung" id="event-description"></textarea>
-					<a class="btn btn-positive btn-block" href="#" onclick="save();">speichern</a>
+					<a class="btn btn-positive btn-block save-event" href="#" onclick="save();">speichern</a>
 				</form>
 			</div>
 		</div>
 
 		<!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
 		<div class="content">
-			<ul class="table-view" id="event-list">
+			<ul class="table-view event-list">
 				<li class="table-view-cell media">
 					<a class="navigate-right" href="event.html">
 						<img class="media-object pull-left" src="http://placehold.it/60x60">
@@ -171,6 +171,7 @@
 
 		<!--add fingerblast for desktop users-->
 		<script src="./node_modules/ratchet-npm/docs/assets/js/fingerblast.js"></script>
+
 		<script>
 			var fingerBlast;
 			function activateDesktopSupport (e) {
