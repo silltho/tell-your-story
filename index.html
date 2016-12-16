@@ -1,4 +1,4 @@
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 	<head>
 		<meta charset="utf-8">
 		<title>TellYourStory</title>
@@ -22,6 +22,8 @@
 		<!--<script src="./node_modules/ratchet-npm/dist/js/ratchet.js"></script>-->
 		<!---Desktop Support-->
 		<script src="./dist/js/ratchet.js"></script>   <!---Desktop Support-->
+		<!-- Load Save-Event.js -->
+		<script src="./dist/js/save-event.js"></script>
 
 		<!--<script type="application/javascript">
 			function toggleModal() {
@@ -59,25 +61,25 @@
 
 			<div class="content content-padded">
 				<form>
-					<input type="text" placeholder="Name">
+					<input type="text" name="name" placeholder="Name" id="event-name">
 					<div class="form-row">
-						<input type="text" placeholder="Von">
-						<input type="text" placeholder="Bis">
+						<input type="text" name="von" placeholder="Von" id="event-from">
+						<input type="text" name="bis" placeholder="Bis" id="event-to">
 					</div>
-					<textarea rows="5" placeholder="Beschreibung"></textarea>
-					<a class="btn btn-positive btn-block" href="event.html">speichern</a>
+					<textarea rows="5" name="beschreibung" placeholder="Beschreibung" id="event-description"></textarea>
+					<a class="btn btn-positive btn-block save-event" href="#" onclick="save();">speichern</a>
 				</form>
 			</div>
 		</div>
 
 		<!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
 		<div class="content">
-			<ul class="table-view">
+			<ul class="table-view event-list">
 				<li class="table-view-cell media">
 					<a class="navigate-right" href="event.html">
 						<img class="media-object pull-left" src="http://placehold.it/60x60">
 						<div class="media-body">
-							Zoo Hellbrunn
+							Zoo
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
 							<p><small>10.11.2016 - 10.11.2016</small></p>
 						</div>
@@ -169,6 +171,7 @@
 
 		<!--add fingerblast for desktop users-->
 		<script src="./node_modules/ratchet-npm/docs/assets/js/fingerblast.js"></script>
+
 		<script>
 			var fingerBlast;
 			function activateDesktopSupport (e) {

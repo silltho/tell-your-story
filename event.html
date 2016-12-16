@@ -20,7 +20,7 @@
     <!---Desktop Support-->
     <script src="./dist/js/ratchet.js"></script>   <!---Desktop Support-->
     <link href="/dist/css/tell-your-story.css" rel="stylesheet">
-    <script href="/dist/js/event.js"></script>
+    <script href="/dist/js/save-event.js"></script>
 
     <!-- Material Design Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -34,12 +34,34 @@
 
     <div id="myPopover" class="popover">
         <ul class="table-view">
-            <li class="table-view-cell"><a href="#addEventModal"> Bearbeiten </a></li>
+            <li class="table-view-cell"><a href="#addEventModal" onclick="retrieve();"> Bearbeiten </a></li>
             <li class="table-view-cell"><a href="storyView.html"> Erzählview </a></li>
             <li class="table-view-cell">Löschen</li>
         </ul>
     </div>
+
+
 </header>
+<body>
+<!--Add-Event-Modal-->
+<div id="addEventModal" class="modal">
+    <header class="bar bar-nav">
+        <a class="icon icon-close pull-right" href="/"></a>
+        <h1 class="title">Erlebnis bearbeiten</h1>
+    </header>
+
+    <div class="content content-padded">
+        <form>
+            <input type="text" placeholder="Name" id="event-name">
+            <div class="form-row">
+                <input type="text" placeholder="Von" id="event-from">
+                <input type="text" placeholder="Bis" id="event-to">
+            </div>
+            <textarea rows="5" placeholder="Beschreibung" id="event-description"></textarea>
+            <a class="btn btn-positive btn-block" href="#" onclick="save();">speichern</a>
+        </form>
+    </div>
+</div>
 <div class="content">
 
     <ul class="table-view">
@@ -100,3 +122,4 @@
     var fingerBlast = new FingerBlast('a');
 
 </script>
+</body>
