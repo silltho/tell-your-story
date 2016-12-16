@@ -11,7 +11,11 @@ function save(){
     var testobject =localStorage.getItem("event"); // retrieve
     console.log(JSON.parse(testobject));
 
+
+
 }
+
+
 
 function retrieve(){
 
