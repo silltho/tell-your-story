@@ -1,6 +1,8 @@
-<header class="bar bar-nav">
-    <a class="icon icon-left-nav pull-left" href="event.html"></a>
-    <h1 class="title">ErzählerView</h1>
+<head>
+    <meta charset="utf-8">
+    <title>TellYourStory</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 
     <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
@@ -17,31 +19,31 @@
     <!--<script src="./node_modules/ratchet-npm/dist/js/ratchet.js"></script>-->
     <!---Desktop Support-->
     <script src="./dist/js/ratchet.js"></script>   <!---Desktop Support-->
-
-    <!--<script type="application/javascript">
-        function toggleModal() {
-            var modalSelector = '#addEventModal';
-            if($(modalSelector).hasClass('active')) $(modalSelector).removeClass('active');
-            else $('#addEventModal').addClass('active');*/
-        }
-        /*function closeModal() {
-            $('#addEventModal').removeClass('active');
-        }
-
-        function openModal() {
-            $('#addEventModal').addClass('active');
-        }
-    </script>-->
-
-    <!--TelYourStory-->
     <link href="/dist/css/tell-your-story.css" rel="stylesheet">
+    <script src="dist/js/erzaehlerView.js"></script>
+
+    <!-- Material Design Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<header class="bar bar-nav fade-in">
+    <a class="icon icon-left-nav pull-left" href="event.html"></a>
+    <h1 class="title">Hallo</h1>
+
+
+
+    <!--<meta name="viewport" content="initial-scale=1, maximum-scale=1">-->
 </header>
 <div class="content">
+
 
     <div class="slider" id="mySlider">
         <div class="slide-group">
             <div class="slide">
+
                 <img class="slide-image" src="dist/img/test-img/test.jpg">
+
 
                 <div class="asset-description">
                     <div class="specific-description">
@@ -121,6 +123,15 @@
 
 <!-- add fingerblast for desktop users -->
 <script src="./node_modules/ratchet-npm/docs/assets/js/fingerblast.js"></script>
+
+</script>
 <script>
     var fingerBlast = new FingerBlast('a');
+    var fingerBlastImg = new FingerBlast(".slide-image");
+
+
+    //var image = ;
+
+
+
 </script>

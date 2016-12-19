@@ -15,33 +15,19 @@
 
 		<!-- include JQuery-->
 		<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-		<script src="node_modules/cloudinary-jquery/cloudinary-jquery.js" type="text/javascript"></script>
-        <script src="config/cloudinary-config.js"></script>
 
 		<!-- Include the compiled Ratchet JS -->
-		<!--<script src="./node_modules/ratchet-npm/dist/js/ratchet.js"></script>-->
-		<!---Desktop Support-->
-		<script src="./dist/js/ratchet.js"></script>   <!---Desktop Support-->
+		<script src="./node_modules/ratchet-npm/dist/js/ratchet.js"></script>
+		<!--Desktop Support-->
+		<!--<script src="./dist/js/ratchet.js"></script>-->
+
 		<!-- Load Save-Event.js -->
 		<script src="./dist/js/save-event.js"></script>
 
-		<!--<script type="application/javascript">
-			function toggleModal() {
-				var modalSelector = '#addEventModal';
-				if($(modalSelector).hasClass('active')) $(modalSelector).removeClass('active');
-				else $('#addEventModal').addClass('active');*/
-			}
-			/*function closeModal() {
-				$('#addEventModal').removeClass('active');
-			}
-
-			function openModal() {
-				$('#addEventModal').addClass('active');
-			}
-		</script>-->
-
-		<!--TelYourStory-->
+		<!--TelYourStory Styles and App-->
 		<link href="/dist/css/tell-your-story.css" rel="stylesheet">
+		<script src="./dist/js/config.js"></script>
+		<script src="./dist/js/tell-your-story.js"></script>
 
 	</head>
 	<body>
@@ -67,7 +53,7 @@
 						<input type="text" name="bis" placeholder="Bis" id="event-to">
 					</div>
 					<textarea rows="5" name="beschreibung" placeholder="Beschreibung" id="event-description"></textarea>
-					<a class="btn btn-positive btn-block save-event" href="#" onclick="save();">speichern</a>
+					<a class="btn btn-positive btn-block save-event" href="#" onclick="createNewEvent();">speichern</a>
 				</form>
 			</div>
 		</div>
@@ -76,20 +62,20 @@
 		<div class="content">
 			<ul class="table-view event-list">
 				<li class="table-view-cell media">
-					<a class="navigate-right" href="event.html">
-						<img class="media-object pull-left" src="http://placehold.it/60x60">
+					<a class="navigate-right" href="event.html" onclick="getEvent(document.getElementById('get-name').innerHTML);">
+						<img class="media-object pull-left get-url" src="http://placehold.it/60x60">
 						<div class="media-body">
-							Zoo
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
-							<p><small>10.11.2016 - 10.11.2016</small></p>
+							<span id="get-name">Mirabellplatz</span>
+							<p class="get-description">-</p>
+							<p class="get-from"><small>...</small>-</p><p class="get-to"><small>...</small></p>
 						</div>
 					</a>
 				</li>
 				<li class="table-view-cell media">
-					<a class="navigate-right" href="event.html">
+					<a class="navigate-right" href="test/firebaseTest.html">
 						<img class="media-object pull-left" src="http://placehold.it/60x60">
 						<div class="media-body">
-							Mirabelgarten
+							Mirabellgarten
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
 							<p><small>25.07.2016 - 25.07.11.2016</small></p>
 						</div>
@@ -166,11 +152,10 @@
 					</a>
 				</li>
 			</ul>
-			<!--<a id="addBtn" href=""><span class="icon icon-btn icon-plus"></span></a>-->
 		</div>
 
 		<!--add fingerblast for desktop users-->
-		<script src="./node_modules/ratchet-npm/docs/assets/js/fingerblast.js"></script>
+		<!--<script src="./node_modules/ratchet-npm/docs/assets/js/fingerblast.js"></script>
 
 		<script>
 			var fingerBlast;
@@ -193,6 +178,8 @@
 					eval(scriptsList[i].innerHTML);
 				}
 			});
-		</script>
+
+
+		</script>-->
 	</body>
 </html>

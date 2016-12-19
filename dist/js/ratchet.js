@@ -717,11 +717,11 @@
   window.addEventListener('touchstart', function () { isScrolling = false; });
   window.addEventListener('touchmove', function () { isScrolling = true; });
   window.addEventListener('touchend', touchend);
-  window.addEventListener('click', /*function (e) { !!!!! desktop support
+  window.addEventListener('click',/*function (e) { //!!!!! desktop support
     if (getTarget(e)) {
       e.preventDefault();
     }
-  }*/ touchend);
+  }*/touchend);
   window.addEventListener('popstate', popstate);
 
   // TODO : Remove this line in the next major version
@@ -946,6 +946,7 @@
   window.addEventListener('touchstart', onTouchStart);
   window.addEventListener('touchmove', onTouchMove);
   window.addEventListener('touchend', onTouchEnd);
+
 
 }());
 
