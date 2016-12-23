@@ -17,18 +17,12 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
+    <script src="../dist/js/tys-config.js"></script>
+    <script src="../dist/js/tys-main.js"></script>
     <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyBhMuIF7RjN2aYePvTtj8CWOC2JrZSfDFM",
-            authDomain: "mmp2-c6757.firebaseapp.com",
-            databaseURL: "https://mmp2-c6757.firebaseio.com",
-            storageBucket: "mmp2-c6757.appspot.com",
-            messagingSenderId: "1060144890044"
-        };
-        firebase.initializeApp(config);
+        firebase.initializeApp(FIREBASE_CONFIG);
     </script>
 
-<script src="../dist/js/indexJS.js"></script>
+    <script src="../dist/js/tys-image.js"></script>
 </body>
 </html>

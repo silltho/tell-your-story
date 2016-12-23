@@ -16,170 +16,24 @@
 		<!-- include JQuery-->
 		<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 
-		<!-- Include the compiled Ratchet JS -->
-		<!--<script src="./node_modules/ratchet-npm/dist/js/ratchet.js"></script>-->
-		<!--Desktop Support-->
-		<!--<script src="./dist/js/ratchet.js"></script>-->
+		<!--PageJS-->
+		<script src="./node_modules/page/page.js"> </script>
 
-		<!-- Load Save-Event.js -->
-		<script src="./dist/js/save-event.js"></script>
+		<!--Handlebars
+		<script src="./node_modules/handlebars/dist/handlebars.js"> </script>-->
 
 		<!--TelYourStory Styles and App-->
 		<link href="/dist/css/tell-your-story.css" rel="stylesheet">
-		<script src="./dist/js/config.js"></script>
-		<script src="./dist/js/tell-your-story.js"></script>
+		<script src="dist/js/tys-config.js"></script>
+		<script src="dist/js/tys-routes.js"></script>
+		<script src="./dist/js/tys-image.js"></script>
+		<script src="./dist/js/tys-story-view.js"></script>
+		<script src="dist/js/tys-main.js"></script>
 
+		<!-- Load Save-Event.js -->
+		<script src="./dist/js/save-event.js"></script>
 	</head>
 	<body>
-		<!-- Make sure all your bars are the first things in your <body> -->
-		<header class="bar bar-nav">
-			<img id="logo" class="media-object pull-left" src="dist/img/tellyourstory-logobook.png"/>
-			<a class="icon icon-plus pull-right" href="#addEventModal"></a>
-		  	<h1 class="title">TellYourStory</h1>
-		</header>
 
-		<!--Add-Event-Modal-->
-		<div id="addEventModal" class="modal">
-			<header class="bar bar-nav">
-				<a class="icon icon-close pull-right" href="/"></a>
-				<h1 class="title">Neues Erlebnis starten</h1>
-			</header>
-
-			<div class="content content-padded">
-				<form>
-					<input type="text" name="name" placeholder="Name" id="event-name">
-					<div class="form-row">
-						<input type="text" name="von" placeholder="Von" id="event-from">
-						<input type="text" name="bis" placeholder="Bis" id="event-to">
-					</div>
-					<textarea rows="5" name="beschreibung" placeholder="Beschreibung" id="event-description"></textarea>
-					<a class="btn btn-positive btn-block save-event" href="#" onclick="createNewEvent();">speichern</a>
-				</form>
-			</div>
-		</div>
-
-		<!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
-		<div class="content">
-			<ul class="table-view event-list">
-				<li class="table-view-cell media">
-					<a class="navigate-right" href="event.html" onclick="getEvent(document.getElementById('get-name').innerHTML);">
-						<img class="media-object pull-left get-url" src="http://placehold.it/60x60">
-						<div class="media-body">
-							<span id="get-name">Mirabellplatz</span>
-							<p class="get-description">-</p>
-							<p class="get-from"><small>...</small>-</p><p class="get-to"><small>...</small></p>
-						</div>
-					</a>
-				</li>
-				<li class="table-view-cell media">
-					<a class="navigate-right" href="test/firebaseTest.html">
-						<img class="media-object pull-left" src="http://placehold.it/60x60">
-						<div class="media-body">
-							Mirabellgarten
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
-							<p><small>25.07.2016 - 25.07.11.2016</small></p>
-						</div>
-					</a>
-				</li>
-				<li class="table-view-cell media">
-					<a class="navigate-right" href="event.html">
-						<img class="media-object pull-left" src="http://placehold.it/60x60">
-						<div class="media-body">
-							Tokio
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
-							<p><small>08.04.2016 - 22.04.2016</small></p>
-						</div>
-					</a>
-				</li>
-				<li class="table-view-cell media">
-					<a class="navigate-right" href="event.html">
-						<img class="media-object pull-left" src="http://placehold.it/60x60">
-						<div class="media-body">
-							Tokio
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
-							<p><small>08.04.2016 - 22.04.2016</small></p>
-						</div>
-					</a>
-				</li>
-				<li class="table-view-cell media">
-					<a class="navigate-right" href="event.html">
-						<img class="media-object pull-left" src="http://placehold.it/60x60">
-						<div class="media-body">
-							Tokio
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
-							<p><small>08.04.2016 - 22.04.2016</small></p>
-						</div>
-					</a>
-				</li>
-				<li class="table-view-cell media">
-					<a class="navigate-right" href="event.html">
-						<img class="media-object pull-left" src="http://placehold.it/60x60">
-						<div class="media-body">
-							Tokio
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
-							<p><small>08.04.2016 - 22.04.2016</small></p>
-						</div>
-					</a>
-				</li>
-				<li class="table-view-cell media">
-					<a class="navigate-right" href="event.html">
-						<img class="media-object pull-left" src="http://placehold.it/60x60">
-						<div class="media-body">
-							Tokio
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
-							<p><small>08.04.2016 - 22.04.2016</small></p>
-						</div>
-					</a>
-				</li>
-				<li class="table-view-cell media">
-					<a class="navigate-right" href="event.html">
-						<img class="media-object pull-left" src="http://placehold.it/60x60">
-						<div class="media-body">
-							Tokio
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
-							<p><small>08.04.2016 - 22.04.2016</small></p>
-						</div>
-					</a>
-				</li>
-				<li class="table-view-cell media">
-					<a class="navigate-right" href="event.html">
-						<img class="media-object pull-left" src="http://placehold.it/60x60">
-						<div class="media-body">
-							Tokio
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
-							<p><small>08.04.2016 - 22.04.2016</small></p>
-						</div>
-					</a>
-				</li>
-			</ul>
-		</div>
-
-		<!--add fingerblast for desktop users-->
-		<!--<script src="./node_modules/ratchet-npm/docs/assets/js/fingerblast.js"></script>
-
-		<script>
-			var fingerBlast;
-			function activateDesktopSupport (e) {
-					fingerBlast = new FingerBlast('a');
-					//e.preventDefault();
-			}
-
-			window.addEventListener('push', activateDesktopSupport);
-			window.addEventListener('load', activateDesktopSupport);
-			window.addEventListener('popstate', activateDesktopSupport);
-			/*
-			window.addEventListener('click', activateDesktopSupport);
-			*/
-
-
-			window.addEventListener('push', function(){
-				var scriptsList = document.querySelectorAll('script.js-custom');
-				for(var i = 0; i < scriptsList.length; ++i) {
-					eval(scriptsList[i].innerHTML);
-				}
-			});
-
-
-		</script>-->
 	</body>
 </html>
