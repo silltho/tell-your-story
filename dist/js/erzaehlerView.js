@@ -1,8 +1,23 @@
 /**
  * Created by Maxi on 30.11.16.
  */
+
+
+$(document).ready(function () {
+	//initialize swiper when document ready
+	var mySwiper = new Swiper ('.swiper-container', {
+		// Optional parameters
+		direction: 'horizontal',
+		pagination: '.swiper-pagination',
+		paginationClickable: true,
+		nextButton: '.swiper-button-next',
+		prevButton: '.swiper-button-prev',
+		spaceBetween: 30
+	})
+});
+
 console.log("lul");
-$(document).on('touchend', '.slide', function() {
+$(document).on('click', '.slide', function() {
 	var fadeClass = $("header");
 	console.log("hallo");
 	if (fadeClass.hasClass("fade-out")) {
