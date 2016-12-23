@@ -19,7 +19,7 @@
     <!-- Include the compiled Ratchet JS -->
     <!--<script src="./node_modules/ratchet-npm/dist/js/ratchet.js"></script>-->
     <!---Desktop Support-->
-    <!--<script src="./dist/js/ratchet.js"></script>   <!---Desktop Support-->
+     <!-- <script src="./dist/js/ratchet.js"></script>   <!---Desktop Support-->
     <link href="/dist/css/tell-your-story.css" rel="stylesheet">
     <script href="/dist/js/save-event.js"></script>
 
@@ -33,19 +33,51 @@
     <a class="icon icon-more-vertical pull-right" href="#myPopover"></a>
     <h1 class="title">Erlebnis</h1>
 
-    <div id="myPopover" class="popover">
+
+
+  <!--  <div id="myPopover" class="popover">
         <ul class="table-view">
             <li class="table-view-cell"><a href="#addEventModal" onclick="retrieve();"> Bearbeiten </a></li>
             <li class="table-view-cell"><a href="../test/storyView.html"> Erzählview </a></li>
             <li class="table-view-cell">Löschen</li>
+            <li>  </li>
         </ul>
-    </div>
+    </div>-->
+
 
 
 </header>
 <body>
+<!-- Button trigger Modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    Launch demo modal
+</button>
+<!-- Bootstrap Modal! -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="icon icon-close pull-right" href="/"></a>
+                <h1 class="modal-title" id="myModalLabel">Erlebnis bearbeiten</h1>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <input type="text" placeholder="Name" id="get-event-name">
+                    <div class="form-row">
+                        <input type="text" placeholder="Von" id="get-event-from">
+                        <input type="text" placeholder="Bis" id="get-event-to">
+                    </div>
+                    <textarea rows="5" placeholder="Beschreibung" id="get-event-description"></textarea>
+                    <a class="btn btn-positive btn-block" href="#" onclick="save();">speichern</a>
+                </form>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
 <!--Add-Event-Modal-->
-<div id="addEventModal" class="modal">
+<!--<div id="addEventModal" class="modal">
     <header class="bar bar-nav">
         <a class="icon icon-close pull-right" href="/"></a>
         <h1 class="title">Erlebnis bearbeiten</h1>
@@ -62,7 +94,7 @@
             <a class="btn btn-positive btn-block" href="#" onclick="save();">speichern</a>
         </form>
     </div>
-</div>
+</div>-->
 <div class="content">
 
     <ul class="table-view">
@@ -108,21 +140,13 @@
         </a>
     </nav>
 
-    <script class="js-custom">
+    <script>
         $(document).ready(function () {
             $('.show').hide()
-            $('.open').bind('click touchstart', function () {
+            $('.open').bind('click', function () {
                 $(".open").toggleClass("icon-down icon-up");
                 $('.show').fadeToggle()
             });
         });
     </script>
 </div>
-
-<!-- add fingerblast for desktop users
-<script src="./node_modules/ratchet-npm/docs/assets/js/fingerblast.js"></script>
-<script>
-    var fingerBlast = new FingerBlast('a');
-
-</script> -->
-</body>

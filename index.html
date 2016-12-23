@@ -34,6 +34,154 @@
 		<script src="./dist/js/save-event.js"></script>
 	</head>
 	<body>
+		<!-- Button trigger Modal -->
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+			Launch demo modal
+		</button>
+		<!-- Bootstrap Modal! -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<a class="icon icon-close pull-right" href="/"></a>
+						<h1 class="modal-title" id="myModalLabel">Erlebnis bearbeiten</h1>
+					</div>
+					<div class="modal-body">
+						<form>
+							<input type="text" placeholder="Name" id="get-event-name">
+							<div class="form-row">
+								<input type="text" placeholder="Von" id="get-event-from">
+								<input type="text" placeholder="Bis" id="get-event-to">
+							</div>
+							<textarea rows="5" placeholder="Beschreibung" id="get-event-description"></textarea>
+							<a class="btn btn-positive btn-block" href="#" onclick="save();">speichern</a>
+						</form>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
 
+		<!-- Make sure all your bars are the first things in your <body> -->
+		<header class="bar bar-nav">
+			<img id="logo" class="media-object pull-left" src="dist/img/tellyourstory-logobook.png"/>
+			<a class="icon icon-plus pull-right" href="#addEventModal"></a>
+		  	<h1 class="title">TellYourStory</h1>
+		</header>
+
+		<!--Add-Event-Modal-->
+		<div id="addEventModal" class="modal">
+			<header class="bar bar-nav">
+				<a class="icon icon-close pull-right" href="/"></a>
+				<h1 class="title">Neues Erlebnis starten</h1>
+			</header>
+
+			<div class="content content-padded">
+				<form>
+					<input type="text" name="name" placeholder="Name" id="event-name">
+					<div class="form-row">
+						<input type="text" name="von" placeholder="Von" id="event-from">
+						<input type="text" name="bis" placeholder="Bis" id="event-to">
+					</div>
+					<textarea rows="5" name="beschreibung" placeholder="Beschreibung" id="event-description"></textarea>
+					<a class="btn btn-positive btn-block save-event" href="#" onclick="createNewEvent();">speichern</a>
+				</form>
+			</div>
+		</div>
+
+		<!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+		<div class="content">
+			<ul class="table-view event-list">
+				<li class="table-view-cell media">
+					<a class="navigate-right" href="event.html" onclick="getEvent(document.getElementById('get-name').innerHTML);">
+						<img class="media-object pull-left get-url" src="http://placehold.it/60x60">
+						<div class="media-body">
+							<span id="get-name">Mirabellplatz</span>
+							<p class="get-description">-</p>
+							<p class="get-from"><small>...</small>-</p><p class="get-to"><small>...</small></p>
+						</div>
+					</a>
+				</li>
+				<li class="table-view-cell media">
+					<a class="navigate-right" href="test/firebaseTest.html">
+						<img class="media-object pull-left" src="http://placehold.it/60x60">
+						<div class="media-body">
+							Mirabellgarten
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+							<p><small>25.07.2016 - 25.07.11.2016</small></p>
+						</div>
+					</a>
+				</li>
+				<li class="table-view-cell media">
+					<a class="navigate-right" href="event.html">
+						<img class="media-object pull-left" src="http://placehold.it/60x60">
+						<div class="media-body">
+							Tokio
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+							<p><small>08.04.2016 - 22.04.2016</small></p>
+						</div>
+					</a>
+				</li>
+				<li class="table-view-cell media">
+					<a class="navigate-right" href="event.html">
+						<img class="media-object pull-left" src="http://placehold.it/60x60">
+						<div class="media-body">
+							Tokio
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+							<p><small>08.04.2016 - 22.04.2016</small></p>
+						</div>
+					</a>
+				</li>
+				<li class="table-view-cell media">
+					<a class="navigate-right" href="event.html">
+						<img class="media-object pull-left" src="http://placehold.it/60x60">
+						<div class="media-body">
+							Tokio
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+							<p><small>08.04.2016 - 22.04.2016</small></p>
+						</div>
+					</a>
+				</li>
+				<li class="table-view-cell media">
+					<a class="navigate-right" href="event.html">
+						<img class="media-object pull-left" src="http://placehold.it/60x60">
+						<div class="media-body">
+							Tokio
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+							<p><small>08.04.2016 - 22.04.2016</small></p>
+						</div>
+					</a>
+				</li>
+				<li class="table-view-cell media">
+					<a class="navigate-right" href="event.html">
+						<img class="media-object pull-left" src="http://placehold.it/60x60">
+						<div class="media-body">
+							Tokio
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+							<p><small>08.04.2016 - 22.04.2016</small></p>
+						</div>
+					</a>
+				</li>
+				<li class="table-view-cell media">
+					<a class="navigate-right" href="event.html">
+						<img class="media-object pull-left" src="http://placehold.it/60x60">
+						<div class="media-body">
+							Tokio
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+							<p><small>08.04.2016 - 22.04.2016</small></p>
+						</div>
+					</a>
+				</li>
+				<li class="table-view-cell media">
+					<a class="navigate-right" href="event.html">
+						<img class="media-object pull-left" src="http://placehold.it/60x60">
+						<div class="media-body">
+							Tokio
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
+							<p><small>08.04.2016 - 22.04.2016</small></p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
 	</body>
 </html>
