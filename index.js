@@ -1,6 +1,9 @@
+require('bootstrap');
+
 var connect = require('connect');
 var serveStatic = require('serve-static');
 var sassMiddleware = require('node-sass-middleware');
+
 
 var srcPath = __dirname + '/sass';
 var destPath = __dirname + '/css';
