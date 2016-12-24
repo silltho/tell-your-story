@@ -61,8 +61,21 @@ function createNewEvent(){
     //listEvents();
 }
 
+function getEvents() {
+    return JSON.parse(localStorage.getItem(LOCALSTORAGE_CONFIG.eventsKey));
+}
+
+function getEventById(id) {
+    var found = false;
+    var events = getEvents();
+    events.forEach(function(event) {
+        if(event.id == id) found = event;
+    });
+    return found;
+}
+
 function saveEvent(newEvent){
-    var events = JSON.parse(localStorage.getItem(LOCALSTORAGE_CONFIG.eventsKey));
+    var events = getEvents();
     if(!events){
         events = [];
     }
@@ -71,9 +84,10 @@ function saveEvent(newEvent){
 }
 
 function showAllEvents(containerSelector){
-    var events = JSON.parse(localStorage.getItem(LOCALSTORAGE_CONFIG.eventsKey));
-    var eventsHtml = '';
+    var events = getEvents();
+    var eventsHtml = 'keine Events vorhanden!';
     if(events){
+        eventsHtml = '';
         events.forEach(function(event) {
             eventsHtml += createEventHtml(event);
         })

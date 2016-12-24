@@ -1,14 +1,18 @@
 $( document ).ready(function() {
     page('/', start);
-    page('/event', event);
+    page('/events/:id', event);
     page('/events/new', newEvent);
     page('/event/story-view', storyView);
     page('*', notFound);
     page();
 });
 
-function event(){
-    $('body').load('./partials/event.part.html');
+function event(ctx){
+    $.get('./partials/event.part.html', function( source ) {
+        var event = getEventById(ctx.params.id);
+        var template = Handlebars.compile(source);
+        $('body').html(template(event));
+    });
 }
 
 function newEvent(){
@@ -16,9 +20,11 @@ function newEvent(){
 }
 
 function start(){
-    $('body').load('./partials/start.part.html');
-    eval($('script').html());
-    //showAllEvents('#eventList');
+    $.get('./partials/start.part.html', function( source ) {
+        var events = getEvents();
+        var template = Handlebars.compile(source);
+        $('body').html(template(events));
+    });
 }
 
 function storyView(){

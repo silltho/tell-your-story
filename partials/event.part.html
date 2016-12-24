@@ -1,7 +1,7 @@
 <header class="bar bar-nav">
     <a class="icon icon-left-nav pull-left" href="/"></a>
     <a class="icon icon-more-vertical pull-right" href="#myPopover"></a>
-    <h1 class="title">Erlebnis</h1>
+    <h1 class="title">{{name}}</h1>
 
 
 
@@ -69,12 +69,12 @@
 
     <ul class="table-view">
         <li class="table-view-cell media event-date">
-            <h4>10.11.2016 - 10.11.2016</h4>
+            <h4>{{from}} - {{to}}</h4>
         </li>
         <li class="table-view-cell media event-description">
             <span class="icon icon-down open"></span>
             <h5>Beschreibung</h5>
-            <p><span class="show">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</span></p>
+            <p><span class="show">{{description}}</span></p>
         </li>
         <li class="table-view-cell media img-list-right">
             <img class="media-object event-images" src="../dist/img/test-img/test.jpg">
