@@ -1,12 +1,28 @@
+<script id="event-template" type="text/x-handlebars-template">
+    <li class="table-view-cell media">
+        <a class="navigate-right" href="/event">
+            <img class="media-object pull-left" src="http://placehold.it/60x60">
+            <div class="media-body">
+                {{name}}
+                <p>{{description}}</p>
+                <p><small>{{from}} - {{to}}</small></p>
+            </div>
+        </a>
+    </li>
+</script>
+
+<script type="text/javascript">
+    showAllEvents('#eventList');
+</script>
 
 <!-- Make sure all your bars are the first things in your <body> -->
 <header class="bar bar-nav">
     <img id="logo" class="media-object pull-left" src="../dist/img/tellyourstory-logobook.png"/>
-    <a class="icon icon-plus pull-right" href="#addEventModal"></a>
+    <a class="icon icon-plus pull-right" href="/events/new"></a>
     <h1 class="title">TellYourStory</h1>
 </header>
 
-<!--Add-Event-Modal-->
+<!--Add-Event-Modal
 <div id="addEventModal" class="modal">
     <header class="bar bar-nav">
         <a class="icon icon-close pull-right" href="/"></a>
@@ -24,12 +40,12 @@
             <a class="btn btn-positive btn-block save-event" href="#" onclick="createNewEvent();">speichern</a>
         </form>
     </div>
-</div>
+</div>-->
 
 <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
 <div class="content">
-    <ul class="table-view event-list">
-        <li class="table-view-cell media">
+    <ul class="table-view event-list" id="eventList" onload="loadEvents()">
+        <!--<li class="table-view-cell media">
             <a class="navigate-right" href="/event" onclick="getEvent(document.getElementById('get-name').innerHTML);">
                 <img class="media-object pull-left get-url" src="http://placehold.it/60x60">
                 <div class="media-body">
@@ -118,6 +134,6 @@
                     <p><small>08.04.2016 - 22.04.2016</small></p>
                 </div>
             </a>
-        </li>
+        </li>-->
     </ul>
 </div>

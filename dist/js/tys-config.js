@@ -5,3 +5,8 @@ var FIREBASE_CONFIG = {
         storageBucket: "mmp2-c6757.appspot.com",
         messagingSenderId: "1060144890044"
 };
+
+var LOCALSTORAGE_CONFIG = {
+        eventsKey: 'events',
+        eventsCounter: 'events-counter'
+};
