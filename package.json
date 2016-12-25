@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run scss && node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass --output-style expanded -o css scss/tell-your-story.scss"
+    "dev": "concurrently --kill-others \"npm run scss -- -w\" \"node index.js\"",
+    "test": "mocha",
+    "scss": "node-sass --output-style expanded -o public/css scss/tell-your-story.scss"
   },
   "repository": {
     "type": "git",
@@ -15,14 +16,21 @@
   "author": "Markus Frenslich, Julia Reisinger und Thomas Siller",
   "license": "ISC",
   "dependencies": {
+    "blueimp-file-upload": "^9.14.1",
+    "cloudinary-jquery": "^2.1.6",
+    "cloudinary-jquery-file-upload": "^2.1.6",
     "connect": "^3.5.0",
     "jquery": "^3.1.1",
     "localStorage": "^1.0.3",
+    "page": "^1.7.1",
     "ratchet-npm": "^2.0.4",
     "serve-static": "^1.11.1"
   },
   "devDependencies": {
+    "concurrently": "^3.1.0",
     "node-sass": "^3.10.1",
-    "node-sass-middleware": "^0.9.8"
+    "node-sass-middleware": "^0.9.8",
+    "mocha": "^3.2.0",
+    "should": "^11.1.1"
   }
 }

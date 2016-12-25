@@ -1,5 +1,251 @@
 @import "variables.scss";
 
-.bar-nav > .title {
-  background-color: $main-color;
+#logo {
+  height: 34px;
+  width: 34px;
+  position: relative;
+  z-index: 20;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
+
+#addEventModal .form {
+  //margin: 10px;
+}
+
+/*#addBtn {
+  color: $basic-color;
+  background-color: $highlight-color;
+  //border: solid 1px $basic-color;
+  color: $highlight-color;
+  background-color: $primary-color;
+  border: solid 1px $highlight-color;
+  border-radius: 100%;
+  padding: 5px;
+  margin:5px 0;
+}*/
+
+.bar .icon {
+  color: $basic-color;
+  background-color: $highlight-color;
+  border-radius: 100%;
+  padding: 5px;
+  margin:5px 0;
+}
+
+.form-row input {
+  float: left;
+  width: 49%;
+}
+.form-row input:last-child {
+  float: right;
+}
+
+/*
+old add button in lower right corner
+
+addBtn {
+  color: $highlight-color;
+  background-color: $primary-color;
+  border: solid 1px $highlight-color;
+  border-radius: 100%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transform: scale(1.8, 1.8);
+  opacity: 0.8;
+}*/
+
+.bar-nav > .title {
+  background-color: $primary-color;
+  color: $highlight-color;
+}
+
+.media-body {
+  color: $highlight-color;
+}
+
+.media-body > p {
+  color:$primary-color;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+}
+
+.media-body small {
+  color: $ratchet-color;
+}
+
+.media-body > p:after {
+  content: '...';
+}
+
+.table-view-cell > .icon {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  transform: scale(0.8, 0.8);
+  padding-top: 2px;
+  padding-left: 1px;
+  padding-right: 1px;
+  padding-bottom: 1px;
+}
+
+.danger {
+  color: $danger-color;
+  background-color: $danger-background-color;
+  border: solid 1px $danger-color;
+}
+
+//Image width in events
+.img-list {
+  width: 135px;
+}
+
+//----------------------------------------------------------------------
+
+// ErzählerView
+
+/*.back-icon-storyview
+{
+  position: fixed;
+  z-index: 10;
+  left: 20px;
+  top: 20px;
+  color: #f0f8ff;
+}
+
+.story-view
+{
+  background-color: $basic-color;
+}*/
+
+.fade-in
+{
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s linear;
+}
+
+.fade-out
+{
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
+}
+
+// Outer wrapper for slider
+.slider {
+  //overflow: hidden;
+  //background-color: #000;
+  overflow-y: hidden;
+
+  background-color: $basic-color;
+  width: 100%;
+
+  // Inner wrapper for slider (width of all slides together)
+  .slide-group {
+    //position: static;
+    //font-size: 0; // Remove spaces from inline-block children
+    //white-space: nowrap;
+    //@include transition(all 0s linear);
+
+    // Individual slide
+    .slide {
+
+      //display: inline-block;
+      //width: 100%;
+      height: auto;
+      //font-size: 14px;
+      //vertical-align: top; // Ensure that li always aligns to top
+      .slide-image{
+        // zentrieren des Bildes
+        display: block;
+        margin: 0 auto;
+
+        //Größe festlegen
+        width: 100%;
+        height: 80%;
+        //height: auto;
+      }
+
+      .asset-description
+      {
+        background: rgba(0,0,0,0.8);
+        color: white;
+        text-align: center;
+        padding: 5px 20px 20px;
+        .specific-description
+        {
+          //Text-Scoll-Box erstellen mit höhe und breite
+          white-space: normal;
+          overflow-y: auto;
+          height: 26%;
+          width: 100%;
+        }
+      }
+
+    }
+  }
+}
+
+//swiper CSS
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+.swiper-slide {
+  overflow: hidden;
+}
+
+//----------------------------------------------------------------------
+
+//Event
+
+
+//whole image list in events
+.img-list-right {
+  padding-right: 15px;
+}
+
+.event-images{
+  width: 160px;
+}
+.icon-img {
+  width: 80px;
+}
+
+.event-date {
+  text-align: center;
+  h4{
+    margin-bottom: 0;
+  }
+}
+
+.event-description{
+  h5{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+//Event-Page Foto Button
+
+/*#File
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+*/
+

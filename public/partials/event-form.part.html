@@ -1,0 +1,16 @@
+<header class="bar bar-nav">
+    <a class="icon icon-close pull-right" href="/"></a>
+    <h1 class="title">Neues Erlebnis starten</h1>
+</header>
+
+<div class="content content-padded">
+    <form>
+        <input type="text" name="name" placeholder="Name" id="event-name">
+        <div class="form-row">
+            <input type="text" name="von" placeholder="Von" id="event-from">
+            <input type="text" name="bis" placeholder="Bis" id="event-to">
+        </div>
+        <textarea rows="5" name="beschreibung" placeholder="Beschreibung" id="event-description"></textarea>
+        <a class="btn btn-positive btn-block save-event" onclick="createNewEvent();">speichern</a>
+    </form>
+</div>

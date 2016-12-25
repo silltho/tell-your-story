@@ -1,0 +1,119 @@
+<header class="bar bar-nav">
+    <a class="icon icon-left-nav pull-left" href="/"></a>
+    <a class="icon icon-more-vertical pull-right" href="/events/{{id}}/edit"></a>
+    <h1 class="title">{{name}}</h1>
+
+
+
+  <!--  <div id="myPopover" class="popover">
+        <ul class="table-view">
+            <li class="table-view-cell"><a href="#addEventModal" onclick="retrieve();"> Bearbeiten </a></li>
+            <li class="table-view-cell"><a href="../test/storyView.html"> Erzählview </a></li>
+            <li class="table-view-cell">Löschen</li>
+            <li>  </li>
+        </ul>
+    </div>-->
+
+
+
+</header>
+<body>
+<!-- Button trigger Modal
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    Launch demo modal
+</button> -->
+<!-- Bootstrap Modal!
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="icon icon-close pull-right" href="/"></a>
+                <h1 class="modal-title" id="myModalLabel">Erlebnis bearbeiten</h1>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <input type="text" placeholder="Name" id="get-event-name">
+                    <div class="form-row">
+                        <input type="text" placeholder="Von" id="get-event-from">
+                        <input type="text" placeholder="Bis" id="get-event-to">
+                    </div>
+                    <textarea rows="5" placeholder="Beschreibung" id="get-event-description"></textarea>
+                    <a class="btn btn-positive btn-block" href="#" onclick="save();">speichern</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+<!--Add-Event-Modal-->
+<!--<div id="addEventModal" class="modal">
+    <header class="bar bar-nav">
+        <a class="icon icon-close pull-right" href="/"></a>
+        <h1 class="title">Erlebnis bearbeiten</h1>
+    </header>
+
+    <div class="content content-padded">
+        <form>
+            <input type="text" placeholder="Name" id="get-event-name">
+            <div class="form-row">
+                <input type="text" placeholder="Von" id="get-event-from">
+                <input type="text" placeholder="Bis" id="get-event-to">
+            </div>
+            <textarea rows="5" placeholder="Beschreibung" id="get-event-description"></textarea>
+            <a class="btn btn-positive btn-block" href="#" onclick="save();">speichern</a>
+        </form>
+    </div>
+</div>-->
+<div class="content">
+
+    <ul class="table-view">
+        <li class="table-view-cell media event-date">
+            <h4>{{from}} - {{to}}</h4>
+        </li>
+        <li class="table-view-cell media event-description">
+            <span class="icon icon-down open"></span>
+            <h5>Beschreibung</h5>
+            <p><span class="show">{{description}}</span></p>
+        </li>
+        <li class="table-view-cell media img-list-right">
+            {{#each files}}
+                <img class="media-object event-images" src="{{url}}">
+            {{/each}}
+            <img class="media-object event-images" src="../img/test-img/test.jpg">
+            <img class="media-object event-images" src="../img/test-img/test.jpg">
+            <img class="media-object event-images" src="../img/test-img/test.jpg">
+            <img class="media-object event-images" src="../img/test-img/test.jpg">
+            <img class="media-object event-images" src="../img/test-img/test.jpg">
+            <img class="media-object event-images" src="../img/test-img/test.jpg">
+            <img class="media-object event-images" src="../img/test-img/test.jpg">
+            <img class="media-object event-images" src="../img/test-img/test.jpg">
+            <img class="media-object event-images" src="../img/test-img/test.jpg">
+            <img class="media-object event-images" src="../img/test-img/test.jpg">
+        </li>
+    </ul>
+
+    <nav class="bar bar-tab">
+        <a class="tab-item" href="#">
+            <i class="material-icons">insert_comment</i>
+        </a>
+        <a class="tab-item" href="#">
+            <i class="material-icons">insert_photo</i>
+        </a>
+        <a class="tab-item" href="#">
+            <i class="material-icons">add_a_photo</i>
+            <input type="file" accept="image/*"/>
+
+        </a>
+    </nav>
+
+    <script>
+        $(document).ready(function () {
+            $('.show').hide()
+            $('.open').bind('click', function () {
+                $(".open").toggleClass("icon-down icon-up");
+                $('.show').fadeToggle()
+            });
+        });
+    </script>
+</div>

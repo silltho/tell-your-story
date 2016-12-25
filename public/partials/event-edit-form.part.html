@@ -1,0 +1,17 @@
+<header class="bar bar-nav">
+    <a class="icon icon-close pull-right" href="/events/{{id}}"></a>
+    <h1 class="title">Erlebnis - {{id}} bearbeiten</h1>
+</header>
+
+<div class="content content-padded">
+    <form>
+        <input type="hidden" name="id" id="event-id" value="{{id}}">
+        <input type="text" name="name" placeholder="Name" id="event-name" value="{{name}}">
+        <div class="form-row">
+            <input type="text" name="von" placeholder="Von" id="event-from" value="{{from}}">
+            <input type="text" name="bis" placeholder="Bis" id="event-to" value="{{to}}">
+        </div>
+        <textarea rows="5" name="beschreibung" placeholder="Beschreibung" id="event-description">{{description}}</textarea>
+        <a class="btn btn-positive btn-block save-event" onclick="saveUpdatedEvent();">speichern</a>
+    </form>
+</div>
