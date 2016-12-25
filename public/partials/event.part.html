@@ -1,6 +1,6 @@
 <header class="bar bar-nav">
     <a class="icon icon-left-nav pull-left" href="/"></a>
-    <a class="icon icon-more-vertical pull-right" href="#myPopover"></a>
+    <a class="icon icon-more-vertical pull-right" href="/events/{{id}}/edit"></a>
     <h1 class="title">{{name}}</h1>
 
 
@@ -18,11 +18,11 @@
 
 </header>
 <body>
-<!-- Button trigger Modal -->
+<!-- Button trigger Modal
 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
     Launch demo modal
-</button>
-<!-- Bootstrap Modal! -->
+</button> -->
+<!-- Bootstrap Modal!
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -41,9 +41,9 @@
                     <a class="btn btn-positive btn-block" href="#" onclick="save();">speichern</a>
                 </form>
             </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+        </div>
+    </div>
+</div>-->
 
 
 <!--Add-Event-Modal-->
@@ -77,22 +77,19 @@
             <p><span class="show">{{description}}</span></p>
         </li>
         <li class="table-view-cell media img-list-right">
-            <img class="media-object event-images" src="../dist/img/test-img/test.jpg">
-            <img class="media-object event-images" src="../dist/img/test-img/test.jpg">
-            <img class="media-object event-images" src="../dist/img/test-img/test.jpg">
-            <img class="media-object event-images" src="../dist/img/test-img/test.jpg">
-            <img class="media-object event-images" src="../dist/img/test-img/test.jpg">
-            <img class="media-object event-images" src="../dist/img/test-img/test.jpg">
-            <img class="media-object event-images" src="../dist/img/test-img/test.jpg">
-            <img class="media-object event-images" src="../dist/img/test-img/test.jpg">
-            <img class="media-object event-images" src="../dist/img/test-img/test.jpg">
-            <img class="media-object event-images" src="../dist/img/test-img/test.jpg">
-            <img class="media-object event-images" src="../dist/img/test-img/test.jpg">
-            <img class="media-object event-images" src="../dist/img/test-img/test.jpg">
-            <img class="media-object event-images" src="../dist/img/test-img/test.jpg">
-            <img class="media-object event-images" src="../dist/img/test-img/test.jpg">
-            <img class="media-object event-images" src="../dist/img/test-img/test.jpg">
-            <img class="media-object event-images" src="../dist/img/test-img/test.jpg">
+            {{#each files}}
+                <img class="media-object event-images" src="{{url}}">
+            {{/each}}
+            <img class="media-object event-images" src="../img/test-img/test.jpg">
+            <img class="media-object event-images" src="../img/test-img/test.jpg">
+            <img class="media-object event-images" src="../img/test-img/test.jpg">
+            <img class="media-object event-images" src="../img/test-img/test.jpg">
+            <img class="media-object event-images" src="../img/test-img/test.jpg">
+            <img class="media-object event-images" src="../img/test-img/test.jpg">
+            <img class="media-object event-images" src="../img/test-img/test.jpg">
+            <img class="media-object event-images" src="../img/test-img/test.jpg">
+            <img class="media-object event-images" src="../img/test-img/test.jpg">
+            <img class="media-object event-images" src="../img/test-img/test.jpg">
         </li>
     </ul>
 

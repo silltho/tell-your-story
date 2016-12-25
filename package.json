@@ -7,7 +7,7 @@
     "start": "npm run scss && node index.js",
     "dev": "concurrently --kill-others \"npm run scss -- -w\" \"node index.js\"",
     "test": "mocha",
-    "scss": "node-sass --output-style expanded -o dist/css scss/tell-your-story.scss"
+    "scss": "node-sass --output-style expanded -o public/css scss/tell-your-story.scss"
   },
   "repository": {
     "type": "git",
