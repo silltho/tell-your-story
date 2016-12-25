@@ -1,5 +1,5 @@
 var FIREBASE_CONFIG = {
-        apiKey: "firebaseApiKEey",
+        apiKey: "firebaseApiKey",
         authDomain: "authDomain.firebaseapp.com",
         databaseURL: "https://databaseName.firebaseio.com",
         storageBucket: "storageBucket.appspot.com",
